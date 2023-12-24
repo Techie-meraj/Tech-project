@@ -1,4 +1,2 @@
 # Tech-project
-First Git Repository
-<br>
-Author-Meraj
+First Git Repository.This is my first project .
