@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="container">
+      <div class="calculator">
+        <form>
+          <div class="displays">
+            <input type="text" id="textarea">
+          </div>
+          <div>
+            <input type="button" value="AC" onclick="clearscreen()">
+            <input type="button" value="DE" onclick="dellastchr()">
+            <input type="button" value="."  onclick="calnum('.')">
+            <input type="button" value="/" onclick="calnum('/')">
+          </div>
+          <div>
+            <input type="button" value="7" onclick="calnum('7')">
+            <input type="button" value="8" onclick="calnum('8')">
+            <input type="button" value="9" onclick="calnum('9')">
+            <input type="button" value="+" onclick="calnum('+')">
+          </div>
+          <div>
+            <input type="button" value="4" onclick="calnum('4')">
+            <input type="button" value="5" onclick="calnum('5')">
+            <input type="button" value="6" onclick="calnum('6')">
+            <input type="button" value="-" onclick="calnum('-')">
+          </div>
+          <div>
+            <input type="button" value="1" onclick="calnum('1')">
+            <input type="button" value="2" onclick="calnum('2')">
+            <input type="button" value="3" onclick="calnum('3')">
+            <input type="button" value="*" onclick="calnum('*')">
+          </div>
+          <div>
+            <input type="button" value="00" onclick="calnum('00')">
+            <input type="button" value="0" onclick="calnum('0')">
+            <input type="button" value="=" id="equal" onclick="calresult()">
+          </div>
+
+
+        </form>
+      </div>
+
+
+    </div>
+    <script>
+   function calnum(value){
+    let num = document.getElementById("textarea")
+    num.value=value;
+   }
+   function clearscreen(){
+    let cls=document.getElementById("textarea")
+    cls.value="";
+   }
+   function dellastchr(){
+    let lastchr=document.getElementById("textarea")
+    lastchr.value=lastchr.value.slice(0,-1)
+   }
+   function calresult(){
+    let result=document.getElementById("textarea")
+    result.value=eval(result.value)
+   }
+    </script>
+    <script src="calculator.js"></script>
+</body>
+</html>
